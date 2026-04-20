@@ -19,7 +19,7 @@ O fluxo do projeto é simples:
 No PowerShell:
 
 ```powershell
-cd "C:\Users\caios\OneDrive\666"
+cd "Caminho que está os arquivos, exemplo: C:\Users\Caio\Mapadev"
 python -m http.server 8000
 ```
 
