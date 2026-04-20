@@ -1,0 +1,11 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "editor-browser",
+      "request": "launch",
+      "name": "Abrir site no navegador integrado",
+      "url": "http://127.0.0.1:8000"
+    }
+  ]
+}

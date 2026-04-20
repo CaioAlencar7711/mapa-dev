@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mapa Dev | Descubra sua trilha em tecnologia</title>
+  <meta name="description"
+    content="Responda a um quiz rápido e descubra qual área da tecnologia combina mais com você, além de receber uma trilha de aprendizagem personalizada." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <nav class="topbar">
+        <span class="brand">Mapa Dev</span>
+        <a class="topbar-link" href="#quiz">Fazer quiz</a>
+      </nav>
+
+      <div class="hero-grid">
+        <section class="hero-copy">
+          <p class="eyebrow">Trilha de aprendizagem para futuros desenvolvedores</p>
+          <h1>Descubra qual área tech combina com você e monte seu caminho de estudo.</h1>
+          <p class="hero-text">
+            Em poucos minutos, você responde a um quiz de perfil e recebe uma
+            recomendação com foco, tecnologias, projetos sugeridos e uma rota
+            clara para sair do zero.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#quiz">Começar agora</a>
+            <a class="button button-secondary" href="#areas">Ver áreas</a>
+          </div>
+
+          <ul class="hero-highlights">
+            <li>Quiz rápido com leitura de perfil</li>
+            <li>Resultado com área recomendada</li>
+            <li>Trilha de formação em etapas práticas</li>
+          </ul>
+        </section>
+
+        <aside class="hero-panel">
+          <div class="floating-card accent-card">
+            <span class="card-label">Perfil + trilha</span>
+            <strong>Frontend? Backend? Mobile? Dados? DevOps?</strong>
+            <p>
+              O site cruza suas respostas com interesses reais do dia a dia
+              de cada área.
+            </p>
+          </div>
+
+          <div class="floating-card stats-card">
+            <div>
+              <span class="stat-value">5</span>
+              <span class="stat-label">áreas mapeadas</span>
+            </div>
+            <div>
+              <span class="stat-value">6</span>
+              <span class="stat-label">perguntas objetivas</span>
+            </div>
+            <div>
+              <span class="stat-value">1</span>
+              <span class="stat-label">resultado personalizado</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="areas">
+        <div class="section-heading">
+          <p class="eyebrow">Áreas exploradas</p>
+          <h2>O quiz cobre os perfis mais comuns no começo da carreira.</h2>
+        </div>
+
+        <div class="area-grid">
+          <article class="area-card">
+            <span class="area-tag area-frontend">Frontend</span>
+            <p>Interfaces, experiência visual, componentes e interação com usuários.</p>
+          </article>
+          <article class="area-card">
+            <span class="area-tag area-backend">Backend</span>
+            <p>APIs, regras de negócio, arquitetura, bancos de dados e segurança.</p>
+          </article>
+          <article class="area-card">
+            <span class="area-tag area-mobile">Mobile</span>
+            <p>Aplicativos para celular, usabilidade em movimento e recursos nativos.</p>
+          </article>
+          <article class="area-card">
+            <span class="area-tag area-data">Dados</span>
+            <p>Análise, Python, SQL, visualização, IA e tomada de decisão com dados.</p>
+          </article>
+          <article class="area-card">
+            <span class="area-tag area-devops">DevOps</span>
+            <p>Infraestrutura, automação, deploy, monitoramento e confiabilidade.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section quiz-section" id="quiz">
+        <div class="quiz-layout">
+          <div class="quiz-intro">
+            <p class="eyebrow">Quiz de afinidade</p>
+            <h2>Responda e descubra sua melhor trilha.</h2>
+            <p>
+              Escolha a alternativa que mais parece com você. Não existe resposta
+              certa ou errada: o objetivo é identificar o tipo de desafio que mais
+              te motiva.
+            </p>
+          </div>
+
+          <div class="quiz-card">
+            <div class="quiz-meta">
+              <span id="questionCounter">Pergunta 1 de 6</span>
+              <div class="progress-track" aria-hidden="true">
+                <div class="progress-fill" id="progressFill"></div>
+              </div>
+            </div>
+
+            <div class="question-block">
+              <p class="question-title" id="questionText"></p>
+              <div class="options-list" id="optionsList"></div>
+            </div>
+
+            <div class="quiz-actions">
+              <button class="button button-secondary" id="prevButton" type="button">
+                Voltar
+              </button>
+              <button class="button button-primary" id="nextButton" type="button">
+                Próxima
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section result-section hidden" id="resultSection">
+        <div class="section-heading">
+          <p class="eyebrow">Seu resultado</p>
+          <h2 id="resultTitle"></h2>
+          <p id="resultDescription"></p>
+        </div>
+
+        <div class="result-hero" id="resultHero"></div>
+
+        <div class="result-actions">
+          <a class="button button-primary" id="studyLink" href="estudos.html">
+            Ir para a plataforma de estudos
+          </a>
+          <p class="result-note">
+            Continue para ver apostilas, vídeos, exemplos práticos e projetos da sua área.
+          </p>
+        </div>
+
+        <div class="result-grid">
+          <article class="result-panel">
+            <h3>Por que essa área combina com você</h3>
+            <ul id="resultReasons" class="detail-list"></ul>
+          </article>
+
+          <article class="result-panel">
+            <h3>Primeiros passos da semana</h3>
+            <ul id="resultFirstSteps" class="detail-list"></ul>
+          </article>
+        </div>
+
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <h3>Trilha recomendada</h3>
+            <button class="button button-secondary" id="restartButton" type="button">
+              Refazer quiz
+            </button>
+          </div>
+          <div id="roadmapTimeline" class="timeline"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

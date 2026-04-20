@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mapa Dev | Plataforma de estudos</title>
+  <meta name="description"
+    content="Acesse uma trilha de estudos personalizada com módulos, apostilas, vídeos e práticas para evoluir na sua área tech." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="page-shell study-shell">
+    <header class="study-topbar">
+      <a class="back-link" href="index.html">Voltar para o quiz</a>
+      <span class="brand">Mapa Dev</span>
+    </header>
+
+    <main class="study-main">
+      <section class="study-hero-card">
+        <div class="study-hero-copy">
+          <p class="eyebrow">Plataforma de estudos</p>
+          <h1 id="studyHeroTitle">Sua área de estudos personalizada</h1>
+          <p id="studyHeroDescription" class="hero-text">
+            Selecione uma área para visualizar módulos, conteúdos e práticas recomendadas.
+          </p>
+        </div>
+
+        <div class="study-meta-card">
+          <span class="card-label">Área ativa</span>
+          <strong id="studyAreaLabel">Escolha uma trilha</strong>
+          <p id="studyAreaSupport">
+            O plano abaixo organiza o que estudar primeiro, o que praticar e como montar portfólio.
+          </p>
+        </div>
+      </section>
+
+      <section class="study-switcher-section">
+        <div class="section-heading compact-heading">
+          <p class="eyebrow">Trocar trilha</p>
+          <h2>Explore outras áreas quando quiser.</h2>
+        </div>
+        <div class="study-switcher" id="studySwitcher"></div>
+      </section>
+
+      <section class="study-language-banner">
+        <p>
+          Priorizamos materiais em português quando existe versão oficial. Quando isso ainda não
+          existe, o card mostra <strong>EN</strong> para você saber antes de abrir.
+        </p>
+      </section>
+
+      <section class="study-overview-grid">
+        <article class="study-card">
+          <h3>Como usar esta trilha</h3>
+          <ul class="detail-list" id="weeklyChecklist"></ul>
+        </article>
+
+        <article class="study-card">
+          <h3>Plano recomendado da semana</h3>
+          <ul class="detail-list" id="weeklyPlan"></ul>
+        </article>
+      </section>
+
+      <section class="study-section">
+        <div class="section-heading compact-heading">
+          <p class="eyebrow">Conteúdo em destaque</p>
+          <h2>Material real para estudar agora.</h2>
+        </div>
+        <div id="featuredContent" class="featured-content"></div>
+      </section>
+
+      <section class="study-section">
+        <div class="section-heading compact-heading">
+          <p class="eyebrow">Módulos</p>
+          <h2>Aprenda por etapas, sem pular fundamentos.</h2>
+        </div>
+        <div class="module-list" id="moduleList"></div>
+      </section>
+
+      <section class="study-section">
+        <div class="section-heading compact-heading">
+          <p class="eyebrow">Biblioteca</p>
+          <h2>Apostilas, vídeos e materiais guiados.</h2>
+        </div>
+        <div class="resource-grid" id="resourceGrid"></div>
+      </section>
+
+      <section class="study-section">
+        <div class="section-heading compact-heading">
+          <p class="eyebrow">Prática</p>
+          <h2>Exemplos práticos e projetos para portfólio.</h2>
+        </div>
+        <div class="project-grid" id="projectGrid"></div>
+      </section>
+
+      <section class="study-section">
+        <div class="section-heading compact-heading">
+          <p class="eyebrow">Exercícios interativos</p>
+          <h2>Teste seu entendimento e pratique sem sair da plataforma.</h2>
+        </div>
+        <div class="exercise-grid" id="exerciseGrid"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="study.js"></script>
+</body>
+
+</html>
