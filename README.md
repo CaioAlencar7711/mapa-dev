@@ -1,12 +1,20 @@
 # Mapa Dev
 
-Plataforma estática em HTML, CSS e JavaScript para ajudar novos desenvolvedores a descobrirem qual área de tecnologia combina mais com o seu perfil.
+Plataforma estatica em HTML, CSS e JavaScript para ajudar novos desenvolvedores a descobrirem qual area de tecnologia combina mais com o seu perfil e estudarem com uma trilha guiada.
 
-O fluxo do projeto é simples:
+## O que o projeto entrega
 
-- o usuário responde um quiz de afinidade
-- recebe uma área recomendada, como frontend, backend, mobile, dados ou DevOps
-- segue para uma página de estudos com conteúdos, vídeos, materiais e práticas iniciais
+- quiz de afinidade para sugerir uma area inicial
+- trilhas de estudo para frontend, backend, mobile, dados e DevOps
+- materiais recomendados, praticas e exercicios interativos
+- Dicionario IA para explicar termos de programacao em linguagem simples
+
+## Como funciona
+
+1. O usuario responde o quiz.
+2. O site identifica a area com maior afinidade.
+3. A plataforma de estudos mostra conteudos, projetos e exercicios da trilha escolhida.
+4. O Dicionario IA ajuda iniciantes a entender termos tecnicos como API, deploy, SQL, Docker e React.
 
 ## Tecnologias
 
@@ -32,7 +40,7 @@ http://127.0.0.1:8000
 ## Estrutura
 
 - `index.html`: landing page com o quiz
-- `estudos.html`: plataforma de estudos personalizada
-- `styles.css`: identidade visual e responsividade
-- `script.js`: lógica do quiz e resultado
-- `study.js`: renderização das trilhas e conteúdos por área
+- `estudos.html`: plataforma de estudos personalizada com o Dicionario IA
+- `styles.css`: identidade visual, responsividade e estilos do glossario
+- `script.js`: logica do quiz e resultado
+- `study.js`: trilhas, recursos, exercicios e inteligencia do Dicionario IA

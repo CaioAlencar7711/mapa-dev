@@ -716,7 +716,8 @@ body::after {
   flex-wrap: wrap;
 }
 
-.pill-row span {
+.pill-row span,
+.pill-row button {
   padding: 8px 12px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.06);
@@ -724,6 +725,23 @@ body::after {
   font-size: 0.9rem;
   font-weight: 600;
   border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.pill-row button {
+  font: inherit;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.pill-row button:hover {
+  transform: translateY(-2px);
+  border-color: rgba(109, 167, 242, 0.32);
+  background: rgba(75, 148, 242, 0.12);
+  box-shadow: 0 14px 28px rgba(2, 6, 23, 0.18);
 }
 
 .result-actions {
@@ -782,6 +800,148 @@ body::after {
 
 .study-language-banner strong {
   color: var(--ink);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.glossary-section {
+  gap: 16px;
+}
+
+.glossary-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: 18px;
+}
+
+.glossary-search-card,
+.glossary-answer-card {
+  display: grid;
+  gap: 18px;
+}
+
+.glossary-intro,
+.glossary-answer-top {
+  display: grid;
+  gap: 12px;
+}
+
+.glossary-intro h3,
+.glossary-title-row h3 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.glossary-intro p,
+.glossary-summary,
+.glossary-hint p,
+.glossary-block p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.glossary-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.glossary-input {
+  width: 100%;
+  min-height: 54px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent),
+    rgba(255, 255, 255, 0.03);
+  color: var(--ink);
+  padding: 0 18px;
+  font: inherit;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.glossary-input::placeholder {
+  color: rgba(184, 211, 247, 0.78);
+}
+
+.glossary-input:focus-visible,
+.pill-row button:focus-visible {
+  outline: 3px solid rgba(109, 167, 242, 0.34);
+  outline-offset: 3px;
+}
+
+.glossary-hint {
+  display: grid;
+  gap: 10px;
+}
+
+.glossary-hint strong,
+.glossary-related-label {
+  color: var(--secondary);
+  font-size: 0.94rem;
+  font-weight: 700;
+}
+
+.glossary-chip-row {
+  align-items: flex-start;
+}
+
+.glossary-status {
+  width: fit-content;
+  background: rgba(109, 167, 242, 0.14);
+  color: var(--ink);
+  border: 1px solid rgba(109, 167, 242, 0.16);
+}
+
+.glossary-title-row {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.glossary-category {
+  white-space: nowrap;
+}
+
+.glossary-answer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.glossary-block {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glossary-block strong {
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+
+.glossary-related {
+  display: grid;
+  gap: 10px;
 }
 
 .study-hero-card,
@@ -1230,6 +1390,8 @@ body::after {
 
 @media (max-width: 900px) {
   .study-hero-card,
+  .glossary-layout,
+  .glossary-answer-grid,
   .study-overview-grid,
   .resource-grid,
   .project-grid,
@@ -1391,13 +1553,18 @@ body::after {
     align-items: stretch;
   }
 
+  .glossary-form {
+    grid-template-columns: 1fr;
+  }
+
   .timeline-item,
   .featured-primary {
     grid-template-columns: 1fr;
   }
 
   .resource-link,
-  .exercise-submit {
+  .exercise-submit,
+  .glossary-form .button {
     width: 100%;
   }
 

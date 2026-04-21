@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mapa Dev | Plataforma de estudos</title>
   <meta name="description"
-    content="Acesse uma trilha de estudos personalizada com módulos, apostilas, vídeos e práticas para evoluir na sua área tech." />
+    content="Acesse uma trilha de estudos personalizada com m&oacute;dulos, apostilas, v&iacute;deos e pr&aacute;ticas para evoluir na sua &aacute;rea tech." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -26,17 +26,17 @@
       <section class="study-hero-card">
         <div class="study-hero-copy">
           <p class="eyebrow">Plataforma de estudos</p>
-          <h1 id="studyHeroTitle">Sua área de estudos personalizada</h1>
+          <h1 id="studyHeroTitle">Sua &aacute;rea de estudos personalizada</h1>
           <p id="studyHeroDescription" class="hero-text">
-            Selecione uma área para visualizar módulos, conteúdos e práticas recomendadas.
+            Selecione uma &aacute;rea para visualizar m&oacute;dulos, conte&uacute;dos e pr&aacute;ticas recomendadas.
           </p>
         </div>
 
         <div class="study-meta-card">
-          <span class="card-label">Área ativa</span>
+          <span class="card-label">&Aacute;rea ativa</span>
           <strong id="studyAreaLabel">Escolha uma trilha</strong>
           <p id="studyAreaSupport">
-            O plano abaixo organiza o que estudar primeiro, o que praticar e como montar portfólio.
+            O plano abaixo organiza o que estudar primeiro, o que praticar e como montar portf&oacute;lio.
           </p>
         </div>
       </section>
@@ -44,16 +44,85 @@
       <section class="study-switcher-section">
         <div class="section-heading compact-heading">
           <p class="eyebrow">Trocar trilha</p>
-          <h2>Explore outras áreas quando quiser.</h2>
+          <h2>Explore outras &aacute;reas quando quiser.</h2>
         </div>
         <div class="study-switcher" id="studySwitcher"></div>
       </section>
 
       <section class="study-language-banner">
         <p>
-          Priorizamos materiais em português quando existe versão oficial. Quando isso ainda não
-          existe, o card mostra <strong>EN</strong> para você saber antes de abrir.
+          Priorizamos materiais em portugu&ecirc;s quando existe vers&atilde;o oficial. Quando isso ainda n&atilde;o
+          existe, o card mostra <strong>EN</strong> para voc&ecirc; saber antes de abrir.
         </p>
+      </section>
+
+      <section class="study-section glossary-section" id="glossarySection">
+        <div class="section-heading compact-heading">
+          <p class="eyebrow">Dicion&aacute;rio IA</p>
+          <h2>Traduza termos de programa&ccedil;&atilde;o para uma linguagem simples.</h2>
+        </div>
+
+        <div class="glossary-layout">
+          <article class="study-card glossary-search-card">
+            <div class="glossary-intro">
+              <h3>Pergunte do seu jeito</h3>
+              <p>
+                Digite um termo ou uma pergunta curta, como "o que &eacute; API?" ou
+                "explica deploy". Voc&ecirc; tamb&eacute;m pode tocar nos termos da trilha.
+              </p>
+            </div>
+
+            <form class="glossary-form" id="glossaryForm">
+              <label class="sr-only" for="glossaryInput">Digite um termo de programa&ccedil;&atilde;o</label>
+              <input
+                class="glossary-input"
+                id="glossaryInput"
+                name="glossary"
+                type="text"
+                placeholder="Ex.: o que &eacute; API?"
+                autocomplete="off"
+              />
+              <button class="button button-primary" type="submit">Explicar termo</button>
+            </form>
+
+            <div class="glossary-hint">
+              <strong>Atalhos da trilha atual</strong>
+              <p>Use estes termos para come&ccedil;ar sem precisar adivinhar o que pesquisar.</p>
+              <div class="pill-row glossary-chip-row" id="glossarySuggestions"></div>
+            </div>
+          </article>
+
+          <article class="study-card glossary-answer-card" id="glossaryAnswer" aria-live="polite">
+            <div class="glossary-answer-top">
+              <span class="card-label glossary-status" id="glossaryStatus">Sugest&atilde;o da trilha</span>
+              <div class="glossary-title-row">
+                <h3 id="glossaryTerm">API</h3>
+                <span class="resource-type glossary-category" id="glossaryCategory">Web</span>
+              </div>
+              <p class="glossary-summary" id="glossarySummary"></p>
+            </div>
+
+            <div class="glossary-answer-grid">
+              <div class="glossary-block">
+                <strong>Em palavras simples</strong>
+                <p id="glossaryDefinition"></p>
+              </div>
+              <div class="glossary-block">
+                <strong>Por que isso importa</strong>
+                <p id="glossaryImportance"></p>
+              </div>
+              <div class="glossary-block">
+                <strong>Exemplo pr&aacute;tico</strong>
+                <p id="glossaryExample"></p>
+              </div>
+            </div>
+
+            <div class="glossary-related">
+              <span class="glossary-related-label">Termos relacionados</span>
+              <div class="pill-row glossary-chip-row" id="glossaryRelated"></div>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section class="study-overview-grid">
@@ -70,7 +139,7 @@
 
       <section class="study-section">
         <div class="section-heading compact-heading">
-          <p class="eyebrow">Conteúdo em destaque</p>
+          <p class="eyebrow">Conte&uacute;do em destaque</p>
           <h2>Material real para estudar agora.</h2>
         </div>
         <div id="featuredContent" class="featured-content"></div>
@@ -78,7 +147,7 @@
 
       <section class="study-section">
         <div class="section-heading compact-heading">
-          <p class="eyebrow">Módulos</p>
+          <p class="eyebrow">M&oacute;dulos</p>
           <h2>Aprenda por etapas, sem pular fundamentos.</h2>
         </div>
         <div class="module-list" id="moduleList"></div>
@@ -87,22 +156,22 @@
       <section class="study-section">
         <div class="section-heading compact-heading">
           <p class="eyebrow">Biblioteca</p>
-          <h2>Apostilas, vídeos e materiais guiados.</h2>
+          <h2>Apostilas, v&iacute;deos e materiais guiados.</h2>
         </div>
         <div class="resource-grid" id="resourceGrid"></div>
       </section>
 
       <section class="study-section">
         <div class="section-heading compact-heading">
-          <p class="eyebrow">Prática</p>
-          <h2>Exemplos práticos e projetos para portfólio.</h2>
+          <p class="eyebrow">Pr&aacute;tica</p>
+          <h2>Exemplos pr&aacute;ticos e projetos para portf&oacute;lio.</h2>
         </div>
         <div class="project-grid" id="projectGrid"></div>
       </section>
 
       <section class="study-section">
         <div class="section-heading compact-heading">
-          <p class="eyebrow">Exercícios interativos</p>
+          <p class="eyebrow">Exerc&iacute;cios interativos</p>
           <h2>Teste seu entendimento e pratique sem sair da plataforma.</h2>
         </div>
         <div class="exercise-grid" id="exerciseGrid"></div>
